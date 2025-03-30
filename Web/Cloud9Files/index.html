@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inference Test</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!--
+    INSTRUCTION:
+    This HTML file sets up the basic UI.
+    Modify this file if you need additional input fields or layout changes.
+  -->
+</head>
+<body>
+  <!-- Optional: Wrap content in a container for centralized styling -->
+  <div class="container">
+    <h2>Test Cluster Prediction</h2>
+    <!--
+      User Input Area:
+      Enter a string of comma-separated numbers. Modify this if your input format needs to change.
+    -->
+    
+    <div class="form">
+      <div class="input-container">
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        required />
+    </div>
+    
+    <div class="input-group">
+      <div class="input-container">
+        <label for="time">When do you usually go to the gym?</label>
+        <input
+          type="number"
+          id="time"
+          name="time"
+          min="1"
+          max="12"
+          required />
+      </div>
+      <div class="input-container">
+        <label for="ampm">AM/PM</label>
+        <select name="ampm" id="ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="input-container">
+      <label for="visits">How many days a week do you plan on going to the gym?</label>
+      <input
+        type="number"
+        id="visits"
+        name="visits"
+        max="7"
+        min="1"
+        required />
+    </div>
+    
+    <div class="input-container">
+        <label for="gymTime">On average, how long are you usually in the gym for?</label>
+        <select name="gymTime" id="gymTime">
+          <option value="30">30 minutes or less</option>
+          <option value="60">1 hour</option>
+          <option value="90">1.5 hours</option>
+          <option value="120">2 hours</option>
+          <option value="150">More than 2 hours</option>
+        </select>
+      </div>
+  
+    <div class="input-checkbox-container">
+      <input
+        type="checkbox"
+        id="premium"
+        name="premium"
+        />
+        <label for="premium">Looking for a premium subscription?</label>
+    </div>
+
+    <div class="input-checkbox-container">
+      <input
+        type="checkbox"
+        id="personalTraining"
+        name="personalTraining"
+        />
+      <label for="personalTraining">Looking for personal training?</label>
+    </div>
+    
+    <div class="input-checkbox-container">
+      <input
+        type="checkbox"
+        id="groupLessons"
+        name="groupLessons"
+        />
+      <label for="groupLessons">Looking for group lessons?</label>
+    </div>
+    
+    <div class="input-checkbox-container">
+      <input
+        type="checkbox"
+        id="sauna"
+        name="sauna"
+      />
+      <label for="sauna">Do you plan on using the sauna often?</label>
+    </div>
+    
+    <div class="input-checkbox-container">
+      <input
+        type="checkbox"
+        id="beverage"
+        name="beverage"
+      />
+      <label for="beverage">Do you plan on purchasing beverages often?</label>
+    </div>
+    </div>
+
+    <br></br>
+    <!--
+      Button:
+      Clicking this button triggers the API call.
+      Modify the event listener in main.js if you want to change the trigger.
+    -->
+    <button id="submitBtn">Submit to API</button>
+    <h3>Response:</h3>
+    <!--
+      Response Area:
+      The API response will be rendered here as an HTML table.
+      Update this area if you want to display additional information.
+    -->
+    <div id="response"></div>
+  </div>
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
